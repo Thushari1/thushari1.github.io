@@ -1,0 +1,104 @@
+# Create a modern 1-page DevOps-focused resume PDF
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib import colors
+from reportlab.lib.units import inch
+from reportlab.platypus import HRFlowable
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase import pdfmetrics
+
+# File path
+file_path = "/mnt/data/Thushari_Mahabaduge_DevOps_Resume.pdf"
+doc = SimpleDocTemplate(file_path)
+
+elements = []
+styles = getSampleStyleSheet()
+
+# Custom Styles
+name_style = ParagraphStyle(
+    'NameStyle',
+    parent=styles['Heading1'],
+    fontSize=18,
+    textColor=colors.HexColor("#0a3d62"),
+    spaceAfter=6
+)
+
+section_style = ParagraphStyle(
+    'SectionStyle',
+    parent=styles['Heading2'],
+    fontSize=12,
+    textColor=colors.HexColor("#1e3799"),
+    spaceBefore=10,
+    spaceAfter=4
+)
+
+normal_style = styles['Normal']
+
+# Header
+elements.append(Paragraph("THUSHARI D.F. MAHABADUGE", name_style))
+elements.append(Paragraph("Las Vegas, NV | (702) 755-2067 | tdarshika@gmail.com", normal_style))
+elements.append(Paragraph("LinkedIn: linkedin.com/in/thushari-mahabaduge-750b2328 | GitHub: github.com/thushari1", normal_style))
+elements.append(Spacer(1, 0.2 * inch))
+elements.append(HRFlowable(width="100%", thickness=1, color=colors.grey))
+elements.append(Spacer(1, 0.2 * inch))
+
+# Professional Summary
+elements.append(Paragraph("PROFESSIONAL SUMMARY", section_style))
+elements.append(Paragraph(
+    "DevOps-focused IT professional with strong foundation in networking, security, and cloud fundamentals. "
+    "Certified in CCNA, CompTIA Network+, Security+, and Cloud+. Experienced in Linux systems, "
+    "infrastructure troubleshooting, and automation fundamentals. Passionate about CI/CD, containerization, "
+    "and building scalable cloud-native environments.",
+    normal_style
+))
+
+# Technical Skills
+elements.append(Paragraph("TECHNICAL SKILLS", section_style))
+skills = [
+    "DevOps: CI/CD Concepts, GitHub Actions, Containerization (Docker)",
+    "Cloud: AWS Fundamentals, EC2 Deployment, Infrastructure Basics",
+    "Networking: TCP/IP, VLANs, DNS, DHCP, Routing & Switching",
+    "Security: Firewall Configuration, Nmap, Network Monitoring",
+    "Operating Systems: Linux (Ubuntu), Windows Server",
+    "Tools: Wireshark, Cisco Packet Tracer, Git, Fluke Testers",
+    "Scripting: Python (Learning), Bash Fundamentals"
+]
+elements.append(ListFlowable([ListItem(Paragraph(skill, normal_style)) for skill in skills], bulletType='bullet'))
+
+# Certifications
+elements.append(Paragraph("CERTIFICATIONS", section_style))
+certs = [
+    "Cisco Certified Network Associate (CCNA)",
+    "CompTIA A+, Network+, Security+, Cloud+",
+    "Microsoft Office Certification"
+]
+elements.append(ListFlowable([ListItem(Paragraph(cert, normal_style)) for cert in certs], bulletType='bullet'))
+
+# Experience
+elements.append(Paragraph("PROFESSIONAL EXPERIENCE", section_style))
+experience = [
+    "IT Intern – Nevada National Security Site (MSTS) (May 2023 – Dec 2023)",
+    "• Assisted with network hardware troubleshooting and fiber installations",
+    "• Supported Layer 1 infrastructure and switch configurations",
+    "• Contributed to data center infrastructure updates",
+    "",
+    "IT Lab & DevOps Projects – WGU",
+    "• Diagnosed DNS and routing issues using Linux tools",
+    "• Conducted network traffic analysis with Wireshark",
+    "• Performed Nmap scans and firewall misconfiguration troubleshooting",
+    "• Deployed secure Linux server environment on AWS EC2"
+]
+
+elements.append(ListFlowable([ListItem(Paragraph(exp, normal_style)) for exp in experience], bulletType='bullet'))
+
+# Education
+elements.append(Paragraph("EDUCATION", section_style))
+elements.append(Paragraph(
+    "Bachelor of Science in Network Engineering & Security – Western Governors University (2024–Present)<br/>"
+    "Associate of Applied Science in Computing & IT – College of Southern Nevada (High Honors, 2023)",
+    normal_style
+))
+
+doc.build(elements)
+
+file_path
