@@ -1,297 +1,211 @@
-/* ===============================
-   RESET
-================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thushari DF Mahabaduge | DevOps Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-html {
-    scroll-behavior: smooth;
-}
+<body>
 
-/* ===============================
-   BODY
-================================= */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    line-height: 1.6;
-    transition: 0.4s ease;
-}
+<header>
+    <div class="logo">Thushari D.F. Mahabaduge</div>
 
-/* Light Mode */
-body.light-mode {
-    background: #f4f6f9;
-    color: #111;
-}
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-body.light-mode header,
-body.light-mode .card,
-body.light-mode .section.dark {
-    background: #ffffff;
-    color: #111;
-}
+    <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
 
-body.light-mode .progress {
-    background: #ddd;
-}
+<!-- HERO -->
+<section class="hero" id="home">
 
-/* ===============================
-   HEADER
-================================= */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-}
+    <div class="hero-text">
+        <h1>Thushari D.F. Mahabaduge</h1>
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-}
+        <div class="tagline">
+            DevOps Engineer • Cloud • Networking (CCNA) • Security+
+        </div>
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: 0.3s;
-}
+        <p>
+            DevOps Engineer with a strong foundation in networking and security,
+            specializing in cloud infrastructure, CI/CD automation, and containerized
+            deployments. Passionate about building scalable, secure, and highly
+            available systems using modern DevOps best practices.
+        </p>
 
-nav a:hover {
-    color: #00c6ff;
-}
+        <a href="#projects" class="btn">View My Projects</a>
 
-.theme-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 20px;
-    color: white;
-}
+        <a href="./Thushari_Mahabaduge_DevOps_Resume_Aligned.pdf"
+           class="btn"
+           target="_blank"
+           rel="noopener">
+           Download CV
+        </a>
+    </div>
 
-/* ===============================
-   HERO
-================================= */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px;
-    flex-wrap: wrap;
-}
+    <div class="hero-image">
+        <img src="profile.jpg" alt="Profile Photo">
+    </div>
 
-.hero-text h1 {
-    font-size: 50px;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+</section>
 
-.tagline {
-    margin: 20px 0;
-    padding: 10px 20px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 30px;
-    display: inline-block;
-}
+<!-- PROJECTS -->
+<section class="section" id="projects">
+    <h2>Projects</h2>
 
-.hero-text p {
-    max-width: 500px;
-    margin-top: 20px;
-}
+    <div class="card">
+        <h3>Dockerized Web Application</h3>
+        <p>Containerized and deployed web application using Docker and Nginx.</p>
+        <a href="https://github.com/thushari1" target="_blank" class="btn">View Code</a>
+    </div>
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 10px;
-    padding: 10px 25px;
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(0,198,255,0.6);
-}
+    <div class="card">
+        <h3>CI/CD Pipeline Automation</h3>
+        <p>Implemented GitHub Actions workflow for automated build and deployment.</p>
+        <a href="https://github.com/thushari1" target="_blank" class="btn">View Code</a>
+    </div>
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(0,198,255,1);
-}
+    <div class="card">
+        <h3>AWS EC2 Deployment</h3>
+        <p>Provisioned secure Linux server on AWS EC2 with SSH hardening.</p>
+        <a href="https://github.com/thushari1" target="_blank" class="btn">View Code</a>
+    </div>
+</section>
 
-/* ===============================
-   PROFILE IMAGE (Modern DevOps)
-================================= */
-.hero-image {
-    position: relative;
-    display: inline-block;
-    padding: 8px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff, #8e2de2);
-    background-size: 200% 200%;
-    animation: gradientMove 6s ease infinite;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    transition: 0.4s ease;
-}
+<!-- SKILLS -->
+<section class="section dark" id="skills">
+    <h2>Technical Skills</h2>
 
-.hero-image img {
-    width: 300px;
-    border-radius: 25px;
-    display: block;
-}
+    <h3>☁ Cloud</h3>
+    <div class="skill-bar">
+        <p>AWS EC2</p>
+        <div class="progress"><span style="width:85%"></span></div>
+    </div>
 
-.hero-image:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-}
+    <h3>⚙ DevOps</h3>
+    <div class="skill-bar">
+        <p>Docker</p>
+        <div class="progress"><span style="width:90%"></span></div>
+    </div>
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+    <div class="skill-bar">
+        <p>CI/CD (GitHub Actions)</p>
+        <div class="progress"><span style="width:80%"></span></div>
+    </div>
 
-/* ===============================
-   GENERAL SECTIONS
-================================= */
-.section {
-    padding: 80px;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
+    <h3>💻 Programming</h3>
+    <div class="skill-bar">
+        <p>Python</p>
+        <div class="progress"><span style="width:70%"></span></div>
+    </div>
 
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+    <h3>🌐 Networking</h3>
+    <div class="skill-bar">
+        <p>TCP/IP, VLANs, Routing</p>
+        <div class="progress"><span style="width:85%"></span></div>
+    </div>
 
-.section.dark {
-    background: rgba(0,0,0,0.2);
-}
+    <h3>🛠 Tools</h3>
+    <div class="skill-bar">
+        <p>Git & VS Code</p>
+        <div class="progress"><span style="width:90%"></span></div>
+    </div>
 
-.section h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-}
+</section>
 
-/* ===============================
-   CARDS
-================================= */
-.card {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.2);
-}
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+    <h2>Certifications</h2>
 
-.card:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.15);
-}
+    <div class="skills-grid">
 
-/* ===============================
-   SKILLS PROGRESS BARS
-================================= */
-#skills h3 {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    color: #00c6ff;
-}
+        <div class="skill">
+            CCNA — Cisco Certified Network Associate
+        </div>
 
-.skill-bar {
-    margin-bottom: 20px;
-}
+        <div class="skill">
+            CompTIA Security+
+        </div>
 
-.skill-bar p {
-    margin-bottom: 6px;
-    font-weight: 500;
-}
+        <div class="skill">
+            CompTIA Network+
+        </div>
 
-.progress {
-    background: rgba(255,255,255,0.1);
-    border-radius: 20px;
-    overflow: hidden;
-    height: 10px;
-}
+        <div class="skill">
+            CompTIA Cloud+
+        </div>
 
-.progress span {
-    display: block;
-    height: 100%;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    border-radius: 20px;
-    animation: loadSkill 2s ease forwards;
-}
+        <div class="skill">
+            <a href="https://www.credly.com/users/thushari-mahabaduge"
+               target="_blank">
+               View Verified Badges (Credly)
+            </a>
+        </div>
 
-@keyframes loadSkill {
-    from { width: 0; }
-}
+    </div>
+</section>
 
-/* ===============================
-   CERTIFICATIONS GRID
-================================= */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact</h2>
 
-.skill {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    <p>Email: <a href="mailto:tdarshika@gmail.com">tdarshika@gmail.com</a></p>
 
-.skill:hover {
-    background: rgba(255,255,255,0.2);
-}
+    <p>LinkedIn:
+        <a href="https://www.linkedin.com/in/thushari-mahabaduge-750b2328/"
+           target="_blank">
+            View Profile
+        </a>
+    </p>
 
-/* ===============================
-   FOOTER
-================================= */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.3);
-    margin-top: 40px;
-}
+    <p>GitHub:
+        <a href="https://github.com/thushari1"
+           target="_blank">
+            github.com/thushari1
+        </a>
+    </p>
+</section>
 
-/* ===============================
-   RESPONSIVE
-================================= */
-@media (max-width: 900px) {
+<footer>
+    © 2026 Thushari D.F. Mahabaduge | DevOps Portfolio
+</footer>
 
-    header {
-        flex-direction: column;
-        padding: 20px;
-        gap: 10px;
+<!-- SCRIPTS -->
+<script>
+
+    // Scroll Animation
+    const sections = document.querySelectorAll(".section");
+
+    function revealSections() {
+        sections.forEach(section => {
+            const position = section.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+            if (position < screenHeight - 100) {
+                section.classList.add("show");
+            }
+        });
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
+    window.addEventListener("scroll", revealSections);
+    window.addEventListener("load", revealSections);
 
-    .hero-image {
-        margin-top: 30px;
-    }
+    // Dark / Light Mode
+    const toggle = document.getElementById("themeToggle");
 
-    .section {
-        padding: 40px 20px;
-    }
-}
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+        toggle.textContent =
+            document.body.classList.contains("light-mode") ? "🌙" : "☀️";
+    });
+
+</script>
+
+</body>
+</html>
