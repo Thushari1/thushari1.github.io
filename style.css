@@ -1,15 +1,9 @@
-/* =========================
-   RESET
-========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-========================= */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -17,14 +11,10 @@ body {
     line-height: 1.6;
 }
 
-/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -34,15 +24,12 @@ header {
 
 .logo {
     font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 1px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
+    margin-left: 20px;
     transition: 0.3s;
 }
 
@@ -50,77 +37,65 @@ nav a:hover {
     color: #00c6ff;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+.theme-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px 80px;
-    min-height: 90vh;
 }
 
 .hero-text h1 {
-    font-size: 60px;
-    line-height: 1.1;
+    font-size: 55px;
     background: linear-gradient(to right, #8e2de2, #4a00e0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .tagline {
-    margin: 25px 0;
-    padding: 12px 25px;
+    margin: 20px 0;
+    padding: 10px 20px;
     background: rgba(255,255,255,0.1);
     border-radius: 30px;
     display: inline-block;
-    font-size: 14px;
-    letter-spacing: 0.5px;
 }
 
 .hero-text p {
-    max-width: 520px;
+    max-width: 500px;
     margin-top: 20px;
-    font-size: 18px;
-    color: rgba(255,255,255,0.9);
 }
 
 .hero-image img {
-    width: 320px;
+    width: 300px;
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-    transition: 0.4s;
 }
 
-.hero-image img:hover {
-    transform: scale(1.03);
-}
-
-/* =========================
-   BUTTON
-========================= */
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 25px;
     background: linear-gradient(45deg, #00c6ff, #0072ff);
     color: white;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 25px;
     font-weight: bold;
     transition: 0.3s;
-    box-shadow: 0 0 15px rgba(0,198,255,0.6);
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(0,198,255,1);
 }
 
-/* =========================
-   GENERAL SECTION
-========================= */
 .section {
     padding: 100px 80px;
     opacity: 0;
@@ -133,47 +108,40 @@ nav a:hover {
     transform: translateY(0);
 }
 
-.section h2 {
-    font-size: 36px;
-    margin-bottom: 50px;
-}
-
-/* =========================
-   CARDS (Glass Effect)
-========================= */
 .card {
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
-    margin-bottom: 25px;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    background: rgba(255,255,255,0.15);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-}
-
-/* =========================
-   DARK SECTION
-========================= */
 .dark {
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.2);
 }
 
-/* =========================
-   SKILLS GRID
-========================= */
+.skill-bar p {
+    margin: 15px 0 5px;
+}
+
+.bar {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 10px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border-radius: 20px;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
 .skill {
@@ -181,66 +149,44 @@ nav a:hover {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    font-weight: bold;
-    transition: 0.3s;
 }
 
-.skill:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-4px);
-}
-
-/* =========================
-   CONTACT LINKS
-========================= */
-#contact a {
-    color: #00c6ff;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   FOOTER
-========================= */
 footer {
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.3);
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-@media (max-width: 900px) {
+/* Light Mode */
+.light-mode {
+    background: #f4f4f4;
+    color: #222;
+}
 
+.light-mode nav a {
+    color: #222;
+}
+
+.light-mode .card,
+.light-mode .skill,
+.light-mode .tagline {
+    background: rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
     header {
-        padding: 20px;
         flex-direction: column;
         gap: 15px;
-    }
-
-    nav a {
-        margin-left: 15px;
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 60px 20px;
-    }
-
-    .hero-text h1 {
-        font-size: 38px;
-    }
-
-    .hero-text p {
-        max-width: 100%;
+        padding: 50px 20px;
     }
 
     .hero-image img {
-        width: 250px;
         margin-top: 30px;
     }
 
