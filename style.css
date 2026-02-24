@@ -40,8 +40,8 @@ nav a:hover {
 }
 
 .hero-text h1 {
-    font-size: 48px;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-size: 52px;
+    background: linear-gradient(to right, #7f00ff, #00c6ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -64,5 +64,26 @@ nav a:hover {
 .hero-image img {
     width: 300px;
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
 }
