@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thushari DF Mahabaduge | DevOps Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,15 +31,13 @@
         </div>
 
         <p>
-        DevOps Engineer with a strong foundation in networking and security,
-        specializing in cloud infrastructure, CI/CD automation, and containerized
-        deployments. Passionate about building scalable, secure, and highly
-        available systems using modern DevOps best practices.
-            
+            DevOps Engineer with a strong foundation in networking and security,
+            specializing in cloud infrastructure, CI/CD automation, and containerized
+            deployments. Passionate about building scalable, secure, and highly
+            available systems using modern DevOps best practices.
         </p>
 
         <a href="#projects" class="btn">View My Projects</a>
-        
     </div>
 
     <div class="hero-image">
@@ -52,18 +53,31 @@
 
     <div class="card">
         <h3>Dockerized Web Application</h3>
-        <p>Built and deployed a containerized web app using Docker and Nginx.</p>
+        <p>
+            Built and deployed a containerized web application using Docker and Nginx,
+            demonstrating containerization, networking configuration, and deployment best practices.
+        </p>
+        <a href="https://github.com/thushari1" target="_blank" class="btn">View Code</a>
     </div>
 
     <div class="card">
-        <h3>CI/CD Pipeline</h3>
-        <p>Implemented GitHub Actions workflow for automated build and deployment.</p>
+        <h3>CI/CD Pipeline Automation</h3>
+        <p>
+            Designed and implemented a GitHub Actions CI/CD workflow for automated
+            build, test, and deployment processes to improve development efficiency.
+        </p>
+        <a href="https://github.com/thushari1" target="_blank" class="btn">View Code</a>
     </div>
 
     <div class="card">
         <h3>AWS EC2 Deployment</h3>
-        <p>Configured and deployed a Linux server on AWS EC2 with secure SSH access.</p>
+        <p>
+            Provisioned and configured a secure Linux server on AWS EC2,
+            implementing SSH security best practices and cloud infrastructure management.
+        </p>
+        <a href="https://github.com/thushari1" target="_blank" class="btn">View Code</a>
     </div>
+
 </section>
 
 
@@ -89,9 +103,44 @@
     <h2>Contact</h2>
 
     <p>Email: <a href="mailto:tdarshika@gmail.com">tdarshika@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/thushari-mahabaduge-750b2328/" target="_blank">View Profile</a></p>
-    <p>GitHub: <a href="https://github.com/thushari1" target="_blank">github.com/thushari1</a></p>
+    <p>LinkedIn: 
+        <a href="https://www.linkedin.com/in/thushari-mahabaduge-750b2328/" target="_blank">
+            View Profile
+        </a>
+    </p>
+    <p>GitHub: 
+        <a href="https://github.com/thushari1" target="_blank">
+            github.com/thushari1
+        </a>
+    </p>
 </section>
+
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:30px; background:rgba(0,0,0,0.3);">
+    © 2026 Thushari D.F. Mahabaduge | DevOps Portfolio
+</footer>
+
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+    const sections = document.querySelectorAll(".section");
+
+    function revealSections() {
+        sections.forEach(section => {
+            const position = section.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            if (position < screenHeight - 100) {
+                section.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealSections);
+    window.addEventListener("load", revealSections);
+</script>
+
 
 </body>
 </html>
