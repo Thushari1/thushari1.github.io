@@ -89,10 +89,12 @@ nav a:hover {
 /* Cards */
 .card {
     background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 15px;
     margin-bottom: 20px;
     transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .card:hover {
@@ -133,4 +135,68 @@ nav a:hover {
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 250px;
+        margin-top: 30px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,198,255,0.6);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0,198,255,1);
+}
+
+/* Style */
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
