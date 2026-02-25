@@ -274,4 +274,56 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }  
     
+/* ===============================
+   MODERN PROJECT GRID
+================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0,198,255,0.6);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* Tech badges */
+.tech-badges {
+    margin-bottom: 15px;
+}
+
+.tech-badges span {
+    display: inline-block;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+    
 }
