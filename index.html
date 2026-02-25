@@ -254,6 +254,7 @@
 </footer>
 
 <!-- SCRIPTS -->
+
 <script>
 
 // Scroll Animation
@@ -289,12 +290,13 @@ const navMenu = document.getElementById("navMenu");
 
 hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
+});
 
+// Auto close menu when link clicked (mobile)
 document.querySelectorAll("#navMenu a").forEach(link => {
     link.addEventListener("click", () => {
         navMenu.classList.remove("active");
     });
-   
 });
 
 </script>
