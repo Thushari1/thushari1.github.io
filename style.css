@@ -221,4 +221,57 @@ footer {
     .section {
         padding: 70px 20px;
     }
+
+  /* ===============================
+   HAMBURGER MENU
+================================= */
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* Mobile Version */
+@media (max-width: 900px) {
+
+    nav {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: rgba(15, 32, 39, 0.95);
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+        animation: slideDown 0.3s ease;
+    }
+
+    nav a {
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}  
+    
 }
